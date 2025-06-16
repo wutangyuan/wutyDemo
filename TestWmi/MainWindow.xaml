@@ -1,0 +1,18 @@
+﻿<Window x:Class="TestWmi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestWmi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <StackPanel>
+            <Button Width="100" Height="50" x:Name="btnWmi" Content="测试WMI" Click="BtnWmi_OnClick"/>
+            <Button Width="100" Height="50" x:Name="btnCim" Content="测试Cim" Click="BtnCim_OnClick"/>
+        </StackPanel>
+     
+
+    </Grid>
+</Window>
