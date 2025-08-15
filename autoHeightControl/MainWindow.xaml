@@ -6,18 +6,23 @@
         xmlns:local="clr-namespace:autoHeightControl"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Window.Resources>
+    
+   <Window.Resources>
         <local:HeightToHeightConverter x:Key="HeightToHeightConverter"></local:HeightToHeightConverter>
     </Window.Resources>
+
+ 
+
     <Grid>
         <Border
                  Width="360"
                  MaxHeight="503"
                  MinHeight="207"
-                 Padding="30,10,30,20"
+                 Height="{Binding ElementName=Viewer,Path=ExtentHeight,Converter={StaticResource HeightToHeightConverter}}"
+                    Padding="30,10,30,20"
                   Background="Gray" 
                   CornerRadius="10"
-                 x:Name="MainBorder" Height="{Binding ElementName=Viewer,Path=ExtentHeight,Converter={StaticResource HeightToHeightConverter}}"
+                 x:Name="MainBorder"
                  >
 
             <Grid>
@@ -42,16 +47,18 @@
                 </Grid>
 
                 <!--内容显示-->
-                <Grid Grid.Row="2">
+                <Grid Grid.Row="2" Background="Red">
+
+                  
                     <ScrollViewer x:Name="Viewer"
-             Margin="0,10"
-             CanContentScroll="False"
-             HorizontalScrollBarVisibility="Disabled"
-             VerticalScrollBarVisibility="Auto"
-             PanningMode="VerticalOnly">
-                       
+                                  Margin="0,10"
+                                  CanContentScroll="False"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto"
+                                  PanningMode="VerticalOnly">
                         <TextBlock x:Name="textBlock"  TextWrapping="Wrap" Margin="0,0,10,10" FontSize="14" 
-                                Text="发的发哈尽快老师的发哈扣篮大赛好发的发哈尽快老师的发发哈尽发的发哈尽快老师快老师的发哈扣篮大赛好发的发哈尽快老师的发哈扣篮大赛好发的发哈尽" />
+                                   Text="哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽哈尽快老师的发发哈扣篮大赛好发的发哈尽哈扣篮大赛好发的发哈尽发哈尽快老师的发发哈扣篮大赛好发的发哈尽扣篮大赛好发的发哈尽" />
+
                     </ScrollViewer>
                 </Grid>
 
